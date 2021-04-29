@@ -20,27 +20,28 @@ void main(){
 }
 //class BOT
  class Bot{
-   //la force
-   int powers;
-   //la sante
-   int health;
+  int powers;
+ //la sante
+ int health;
 
-   //constructeur
-    Bot(this.powers, this.health);
+ //constructeur
+ Bot(this.powers, this.health);
 
-    subirDomage(String pseudo){
-      print("$pseudo appuyer sur entrer");
-      stdin.readLineSync();
-      Random dice = new Random();
-      //dé 1
-      int dice1 = dice.nextInt(7);
-      //dé 2
-      int dice2 = dice.nextInt(7);
-      //somme des deux dés
-      int points = (dice1 + dice2);
+ subirDomage(String pseudo){
+   print("$pseudo appuyer sur entrer");
+   stdin.readLineSync();
+   Random dice = new Random();
+   //dé 1
+   int dice1 = dice.nextInt(7);
+   //dé 2
+   int dice2 = dice.nextInt(7);
+   //somme des deux dés
+   int points = (dice1 + dice2);
 
-      this.health =(this.health-points);
-      print("$pseudo inflige $points au bot");
-      print("bot a ${this.health}");
-    }
+   this.health =(this.health-points);
+   print("$pseudo inflige $points au bot");
+   print("bot a ${this.health}");
+ }
+
+ //la force
  }
