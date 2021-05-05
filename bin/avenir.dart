@@ -13,6 +13,8 @@ void main(){
   DateTime now = new DateTime.now();
   DateTime dateHM = new DateTime(now.hour, now.minute);
   print(dateHM);
+  //get H M
+
 
   var minutes = int.parse(stdin.readLineSync());
    if(minutes >=60){
@@ -22,7 +24,7 @@ void main(){
      print(min);
      minutes = min;
      hours = hours + hrs;
-     print('il est $hours Heures $minutes Minutes');
+     print('l heure est: $hours Heures $minutes Minutes');
    }else{
      print(hours);
      print(minutes);

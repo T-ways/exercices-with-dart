@@ -18,6 +18,18 @@ void main(){
 
 
 }
+ //PLAYER...
+class Player{
+  String playerName;
+  int playerLife;
+  int playerHealth;
+
+  Player(this.playerName, this.playerLife , this.playerHealth);
+
+ }
+
+ //PLAYER
+
 //class BOT
  class Bot{
   int powers;
@@ -30,12 +42,13 @@ void main(){
  subirDomage(String pseudo){
    print("$pseudo appuyer sur entrer");
    stdin.readLineSync();
-   Random dice = new Random();
+    Random dice = new Random();
    //dé 1
-   int dice1 = dice.nextInt(7);
+   var dice1 = dice.nextInt(6)+1;
    //dé 2
-   int dice2 = dice.nextInt(7);
+   int dice2 = dice.nextInt(6)+1;
    //somme des deux dés
+   print("on a $dice2  et $dice1");
    int points = (dice1 + dice2);
 
    this.health =(this.health-points);
@@ -43,5 +56,4 @@ void main(){
    print("bot a ${this.health}");
  }
 
- //la force
  }
