@@ -21,7 +21,7 @@ void main(){
   var i =1;
   //user attack numbers
 
-  while(Roboto.health>0 || Mario.playerHealth > 0){
+  while(Roboto.health>0 && Mario.playerHealth > 0){
     Roboto.subirDomage(pseudo);
     Mario.counterAttack();
     print("nous somme au tour $i");
@@ -30,13 +30,16 @@ void main(){
       print("${Mario.playerName} a Gagner !!!");
     }else if(Mario.playerHealth <=0){
       print(" le bot a gagné ${Mario.playerName} !!!");
+    }else if(Mario.playerHealth == Roboto.health){
+       print("${Mario.playerName} et le Bot sont en égalité !!!");
     }else{
-     // print("combat en cours !!!");
-    }
+  // print("combat en cours !!!");
+  }
   }print("fin du tour ");
 
 
 }
+
 //class BOT
 class Bot{
   int powers;
@@ -55,6 +58,8 @@ class Bot{
    // print(dice1);
     //dé 2
     var dice2 = dice.nextInt(6)+1;
+
+
     //print("$dice2");
     //somme des deux dés
     int points = (dice1 + dice2);
