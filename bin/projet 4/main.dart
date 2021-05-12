@@ -4,6 +4,15 @@ import 'player.dart';
 
 void main(){
 
+  //Afficher le BOT
+
+  //!-Afficher Le BOT
+
+  //Afficher Le player
+
+
+  //!-Afficher Le player
+
 //lancer des dés
   throwDices(){
     Random dice = new Random();
