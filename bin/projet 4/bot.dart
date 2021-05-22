@@ -35,4 +35,23 @@ class Bot{
   displayBot(){
     print("Affiche Bot vie:${this.health} ; santé:${this.powers} ; Nom:BOT;");
   }
+
+  //attaque du Bot
+    attack(String Adverse, int vies){
+      Random dice = new Random();
+      //dé 1
+      var dice1 = dice.nextInt(6)+1;
+      // print(dice1);
+      //dé 2
+      var dice2 = dice.nextInt(6)+1;
+      //print("$dice2");
+      //somme des deux dés
+      int points = (dice1 + dice2);
+
+      vies = (vies -points);
+
+      var information =[Adverse,'$vies'];
+      //print("BOT a attaqué ${Adverse} avec $points ${Adverse} est de $vies");
+      return information;
+    }
 }
